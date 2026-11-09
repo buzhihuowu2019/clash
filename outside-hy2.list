@@ -1,14 +1,5 @@
-# 内容：outside-hy2 Google 相关规则
-# 用途：供 OpenClash rule-provider 读取，让 Google 搜索 / Gmail / Gemini 相关流量走 AI 专用 -> outside-hy2
-# 注意：DOMAIN-SUFFIX,google.com 会覆盖 *.google.com；如需精确限定，请后续改成 DOMAIN,www.google.com 等精确主机
-# 数量：10条
-DOMAIN-SUFFIX,google.com
-DOMAIN-SUFFIX,google.com.hk
-DOMAIN-SUFFIX,gmail.com
-DOMAIN-SUFFIX,googlemail.com
-DOMAIN-SUFFIX,gstatic.com
-DOMAIN-SUFFIX,googleusercontent.com
-DOMAIN,generativelanguage.googleapis.com
-DOMAIN,cloudaicompanion.googleapis.com
-DOMAIN,gmail.googleapis.com
-DOMAIN,oauth2.googleapis.com
+# outside-hy2 AI 专线自定义规则列表
+# Google 搜索、Gmail、Gemini 及相关 Google 资源已移出 AI 专线。
+# 它们沿用软路由的普通代理自动回退，与 YouTube 使用同一个出口策略组。
+# 当前无规则；ChatGPT、Claude 等固定 AI 规则仍由路由器 ai_proxy.yaml 管理。
+# 后续可在此添加其他需要固定走 outside-hy2 的域名，勿重新添加 Google 相关规则。
